@@ -3,74 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexxoStore - Tecnología a tu Alcance</title>
+    <title>NexxoStore | Tecnología & Tech Accessories</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo"><i class="fa-solid fa-microchip"></i> Nexxo<span>Store</span></div>
-        <nav>
-            <a href="#productos" class="nav-btn"><i class="fa-solid fa-store"></i> Ver Productos</a>
-        </nav>
+        <div class="logo">
+            <i class="fa-solid fa-bolt logo-icon"></i> Nexxo<span>Store</span>
+        </div>
+        <a href="#catalogo" class="nav-btn">
+            <i class="fa-solid fa-compass"></i> Descubrir
+        </a>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Tecnología de Vanguardia</span>
-            <h1>Encontrá la mejor tecnología urbana</h1>
-            <p>Accesorios premium, audio de alta definición y carga rápida. Todo pensado para tu día a día.</p>
-            <a href="#productos" class="cta-button">Explorar Catálogo <i class="fa-solid fa-arrow-down"></i></a>
+            <div class="brand-badge">
+                <i class="fa-solid fa-sparkles"></i> Innovación sin límites
+            </div>
+            <h1 class="brand-title">NexxoStore</h1>
+            <p class="hero-subtitle">El nexo exacto entre tu ecosistema digital y el máximo rendimiento. Todo lo que tu setup necesita, elevado al siguiente nivel.</p>
+            <a href="#catalogo" class="cta-button">
+                Explorar Colección <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
         </div>
     </section>
 
-    <section id="productos" class="catalog">
-        <h2 class="section-title">Nuestros Productos</h2>
+    <section id="catalogo" class="catalog-container">
+        <div class="section-header">
+            <span class="sub-title">Catálogo Exclusivo</span>
+            <h2>Equipamiento Tech</h2>
+            <div class="glow-line"></div>
+        </div>
+
         <div class="grid">
 
             <div class="card card-1">
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="Auriculares Inalámbricos">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=700&q=80" alt="Auriculares TWS Premium" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-headphones"></i> Audio HD</span>
                 </div>
                 <div class="card-content">
-                    <span class="category">Audio Premium</span>
-                    <h3>Auriculares Inalámbricos</h3>
-                    <p>Cancelación activa de ruido, sonido de alta definición y batería de hasta 24 hs de reproducción continua.</p>
-                    <div class="card-footer">
-                        <span class="price">$29.999</span>
-                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Inalámbricos" target="_blank" class="buy-btn">Consultar <i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                    <h3>Auriculares Inalámbricos TWS</h3>
+                    <p>Inmersión sonora total, cancelación de ruido adaptativa y sincronización ultrarrápida sin latencia.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Inalámbricos%20TWS" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
             <div class="card card-2">
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Cables USB Carga Rápida">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Auriculares Over-Ear Pro" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-headphones-simple"></i> Studio Sound</span>
                 </div>
                 <div class="card-content">
-                    <span class="category">Accesorios</span>
-                    <h3>Cable USB-C Reforzado</h3>
-                    <p>Malla de nylon de alta durabilidad anti-enredos. Soporta transferencia de datos y carga ultrarrápida.</p>
-                    <div class="card-footer">
-                        <span class="price">$8.500</span>
-                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20USB-C" target="_blank" class="buy-btn">Consultar <i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                    <h3>Auriculares Over-Ear Wireless</h3>
+                    <p>Diseño ergonómico de alta fidelidad, almohadillas memory foam y graves acústicos profundos.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Over-Ear" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
             <div class="card card-3">
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=600&q=80" alt="Cargador de iPhone">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=80" alt="Cable USB-C Reforzado" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-bolt"></i> Carga Ultra</span>
                 </div>
                 <div class="card-content">
-                    <span class="category">Cargadores</span>
-                    <h3>Cargador iPhone 20W</h3>
-                    <p>Fuente de pared con conector USB-C a Lightning. Carga eficiente, protegida y segura para tu batería.</p>
-                    <div class="card-footer">
-                        <span class="price">$18.200</span>
-                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20de%20iPhone" target="_blank" class="buy-btn">Consultar <i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                    <h3>Cable USB-C Nylon Braided</h3>
+                    <p>Blindaje trenzado de alta resistencia, compatibilidad PD de alta velocidad y conectores reforzados.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20USB-C%20Nylon" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-4">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=700&q=80" alt="Cable Lightning a USB-C" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-link"></i> Alta Velocidad</span>
+                </div>
+                <div class="card-content">
+                    <h3>Cable USB-C a Lightning</h3>
+                    <p>Transferencia de datos relámpago y carga óptima diseñada para la máxima protección de tu batería.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20Lightning" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-5">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=700&q=80" alt="Cargador iPhone 20W Power Delivery" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-plug"></i> Fast Charge</span>
+                </div>
+                <div class="card-content">
+                    <h3>Cargador iPhone 20W PD</h3>
+                    <p>Adaptador de pared inteligente ultra compacto con control de temperatura de última generación.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20iPhone%2020W" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-6">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1622445268465-8438dd64a15a?auto=format&fit=crop&w=700&q=80" alt="Cargador Magnético MagSafe" loading="lazy">
+                    <span class="type-tag"><i class="fa-solid fa-magnet"></i> MagSafe Tech</span>
+                </div>
+                <div class="card-content">
+                    <h3>Cargador Inalámbrico MagSafe</h3>
+                    <p>Alineación magnética perfecta, carga fluida sin cables molestos y acabado minimalista de precisión.</p>
+                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20MagSafe" target="_blank" rel="noopener noreferrer" class="consult-btn">
+                        <span>Consultar Disponibilidad</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
@@ -78,21 +134,27 @@
     </section>
 
     <div class="floating-buttons">
-        <a href="https://instagram.com/nexxostore.fsa" target="_blank" class="float-btn ig-float" aria-label="Instagram">
+        <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer" class="float-btn ig-float" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://wa.me/5493718588129" target="_blank" class="float-btn wsp-float" aria-label="WhatsApp">
+        <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer" class="float-btn wsp-float" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
 
     <footer class="sea-footer">
+        <div class="wave-layer wave-1"></div>
+        <div class="wave-layer wave-2"></div>
         <div class="footer-content">
-            <h3>NexxoStore</h3>
-            <p>Conectando la mejor tecnología con vos.</p>
+            <div class="footer-brand">Nexxo<span>Store</span></div>
+            <p>Elevando tus sentidos con tecnología de punta.</p>
             <div class="socials">
-                <a href="https://instagram.com/nexxostore.fsa" target="_blank"><i class="fa-brands fa-instagram"></i> @nexxostore.fsa</a>
-                <a href="https://wa.me/5493718588129" target="_blank"><i class="fa-brands fa-whatsapp"></i> +54 9 3718588129</a>
+                <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i> @nexxostore.fsa
+                </a>
+                <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> +54 9 3718588129
+                </a>
             </div>
             <span class="copy">&copy; 2026 NexxoStore. Todos los derechos reservados.</span>
         </div>
