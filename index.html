@@ -3,162 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexxoStore | Tecnología & Tech Accessories</title>
+    <title>NexxoStore | Tecnología & Accesorios Modernos</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fuentes Google: Outfit para títulos y Plus Jakarta Sans para cuerpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navegación -->
     <header class="navbar">
         <div class="logo">
-            <i class="fa-solid fa-bolt logo-icon"></i> Nexxo<span>Store</span>
+            <span class="logo-text">Nexx<span class="logo-o-3d" data-text="O">O</span></span><span class="logo-store">Store</span>
         </div>
-        <a href="#catalogo" class="nav-btn">
-            <i class="fa-solid fa-compass"></i> Descubrir
-        </a>
+
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="¿Qué estás buscando?..." aria-label="Buscar productos">
+        </div>
+
+        <div class="nav-actions">
+            <button class="cart-btn" id="cartToggle" aria-label="Ver mi carrito">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-text">Mi Carrito</span>
+                <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="brand-badge">
-                <i class="fa-solid fa-sparkles"></i> Innovación sin límites
+    <!-- Banner Principal Hero / 3D Composition -->
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-text-side">
+                <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> Innovación Digital 2026</span>
+                <h1 class="hero-title">
+                    Nexx<span class="inline-3d-letter" data-letter="O">O</span>Store
+                </h1>
+                <p class="hero-description">Ecosistemas de sonido, carga ultrarrápida y accesorios diseñados para potenciar tu estilo de vida tech diario.</p>
+                <a href="#catalogo" class="cta-btn">Explorar Catálogo <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <h1 class="brand-title">NexxoStore</h1>
-            <p class="hero-subtitle">El nexo exacto entre tu ecosistema digital y el máximo rendimiento. Todo lo que tu setup necesita, elevado al siguiente nivel.</p>
-            <a href="#catalogo" class="cta-button">
-                Explorar Colección <i class="fa-solid fa-arrow-down-long"></i>
-            </a>
+
+            <div class="hero-visual-side">
+                <div class="hero-banner-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80" alt="Banner Tecnología NexxoStore" class="banner-main-img">
+                    <div class="floating-tech-chip chip-1">
+                        <i class="fa-solid fa-headphones"></i> High-Res Audio
+                    </div>
+                    <div class="floating-tech-chip chip-2">
+                        <i class="fa-solid fa-bolt"></i> Fast Charge 20W+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="catalogo" class="catalog-container">
-        <div class="section-header">
-            <span class="sub-title">Catálogo Exclusivo</span>
-            <h2>Equipamiento Tech</h2>
-            <div class="glow-line"></div>
+    <!-- Catálogo de Productos -->
+    <section id="catalogo" class="catalog-section">
+        <div class="section-title-wrap">
+            <span class="sub-header">Colección Exclusiva</span>
+            <h2>Equipamiento Destacado</h2>
+            <div class="header-line"></div>
         </div>
 
-        <div class="grid">
+        <div class="products-grid">
 
-            <div class="card card-1">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=700&q=80" alt="Auriculares TWS Premium" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-headphones"></i> Audio HD</span>
+            <!-- Producto 1 -->
+            <div class="product-card card-audio">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=700&q=80" alt="Auriculares Inalámbricos TWS">
+                    <span class="category-pill"><i class="fa-solid fa-headphones"></i> Audio</span>
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <h3>Auriculares Inalámbricos TWS</h3>
-                    <p>Inmersión sonora total, cancelación de ruido adaptativa y sincronización ultrarrápida sin latencia.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Inalámbricos%20TWS" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <p class="card-desc">Inmersión sonora total, cancelación de ruido adaptativa y sincronización ultra fluida.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Inalámbricos%20TWS" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card card-2">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Auriculares Over-Ear Pro" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-headphones-simple"></i> Studio Sound</span>
+            <!-- Producto 2 -->
+            <div class="product-card card-studio">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Auriculares Over-Ear Pro">
+                    <span class="category-pill"><i class="fa-solid fa-music"></i> Studio</span>
                 </div>
-                <div class="card-content">
-                    <h3>Auriculares Over-Ear Wireless</h3>
-                    <p>Diseño ergonómico de alta fidelidad, almohadillas memory foam y graves acústicos profundos.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Over-Ear" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                <div class="card-body">
+                    <h3>Auriculares Over-Ear Pro</h3>
+                    <p class="card-desc">Alta fidelidad acústica, almohadillas ergonómicas memory foam y bajos profundos.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20los%20Auriculares%20Over-Ear" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card card-3">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=80" alt="Cable USB-C Reforzado" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-bolt"></i> Carga Ultra</span>
+            <!-- Producto 3 -->
+            <div class="product-card card-cables">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=80" alt="Cable USB-C Nylon Braided">
+                    <span class="category-pill"><i class="fa-solid fa-bolt"></i> Carga</span>
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <h3>Cable USB-C Nylon Braided</h3>
-                    <p>Blindaje trenzado de alta resistencia, compatibilidad PD de alta velocidad y conectores reforzados.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20USB-C%20Nylon" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <p class="card-desc">Blindaje reforzado anti-enredos, soporte para Power Delivery y máxima durabilidad.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20USB-C" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card card-4">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=700&q=80" alt="Cable Lightning a USB-C" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-link"></i> Alta Velocidad</span>
+            <!-- Producto 4 -->
+            <div class="product-card card-data">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=700&q=80" alt="Cable USB-C a Lightning">
+                    <span class="category-pill"><i class="fa-solid fa-link"></i> Conectividad</span>
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <h3>Cable USB-C a Lightning</h3>
-                    <p>Transferencia de datos relámpago y carga óptima diseñada para la máxima protección de tu batería.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20Lightning" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <p class="card-desc">Transferencia de datos ultrarrápida y protección inteligente de la salud de batería.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cable%20Lightning" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card card-5">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=700&q=80" alt="Cargador iPhone 20W Power Delivery" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-plug"></i> Fast Charge</span>
+            <!-- Producto 5 -->
+            <div class="product-card card-chargers">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=700&q=80" alt="Cargador iPhone 20W Fast Charge">
+                    <span class="category-pill"><i class="fa-solid fa-plug"></i> Adaptadores</span>
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <h3>Cargador iPhone 20W PD</h3>
-                    <p>Adaptador de pared inteligente ultra compacto con control de temperatura de última generación.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20iPhone%2020W" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <p class="card-desc">Carga rápida segura con chip interno de control térmico contra sobretensiones.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20iPhone%2020W" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card card-6">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622445268465-8438dd64a15a?auto=format&fit=crop&w=700&q=80" alt="Cargador Magnético MagSafe" loading="lazy">
-                    <span class="type-tag"><i class="fa-solid fa-magnet"></i> MagSafe Tech</span>
+            <!-- Producto 6 -->
+            <div class="product-card card-magsafe">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1622445268465-8438dd64a15a?auto=format&fit=crop&w=700&q=80" alt="Cargador Magnético MagSafe">
+                    <span class="category-pill"><i class="fa-solid fa-magnet"></i> Wireless</span>
                 </div>
-                <div class="card-content">
-                    <h3>Cargador Inalámbrico MagSafe</h3>
-                    <p>Alineación magnética perfecta, carga fluida sin cables molestos y acabado minimalista de precisión.</p>
-                    <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20MagSafe" target="_blank" rel="noopener noreferrer" class="consult-btn">
-                        <span>Consultar Disponibilidad</span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                <div class="card-body">
+                    <h3>Cargador MagSafe Wireless</h3>
+                    <p class="card-desc">Alineación magnética perfecta, acabado de aluminio cepillado y carga sin cables.</p>
+                    <div class="card-actions">
+                        <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        <a href="https://wa.me/5493718588129?text=Hola!%20Quiero%20consultar%20por%20el%20Cargador%20MagSafe" target="_blank" rel="noopener noreferrer" class="wsp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <div class="floating-buttons">
-        <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer" class="float-btn ig-float" aria-label="Instagram">
+    <!-- Botones Flotantes -->
+    <div class="floating-container">
+        <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer" class="float-btn ig-btn" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer" class="float-btn wsp-float" aria-label="WhatsApp">
+        <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer" class="float-btn wsp-btn-float" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
 
+    <!-- Pie de Página Marítimo Completo -->
     <footer class="sea-footer">
-        <div class="wave-layer wave-1"></div>
-        <div class="wave-layer wave-2"></div>
-        <div class="footer-content">
-            <div class="footer-brand">Nexxo<span>Store</span></div>
-            <p>Elevando tus sentidos con tecnología de punta.</p>
-            <div class="socials">
-                <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i> @nexxostore.fsa
-                </a>
-                <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-whatsapp"></i> +54 9 3718588129
-                </a>
+        <div class="wave-bg wave-1"></div>
+        <div class="wave-bg wave-2"></div>
+
+        <div class="footer-container">
+            
+            <div class="footer-grid">
+                <!-- Columna 1: Brand & Quiénes Somos -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">Nexx<span>O</span>Store</div>
+                    <p class="about-text">
+                        <strong>¿Quiénes somos?</strong> Somos una tienda apasionada por la tecnología moderna. Seleccionamos los mejores accesorios para mantener tu ecosistema siempre conectado, rápido y con estilo.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación Demo -->
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#catalogo">Catálogo de Productos</a></li>
+                        <li><a href="javascript:void(0)">¿Quiénes Somos?</a></li>
+                        <li><a href="javascript:void(0)">Mi Carrito</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Legales Demo -->
+                <div class="footer-col">
+                    <h4>Soporte & Legales</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)">Políticas de Devolución</a></li>
+                        <li><a href="javascript:void(0)">Términos y Condiciones</a></li>
+                        <li><a href="javascript:void(0)">Garantía de Productos</a></li>
+                        <li><a href="javascript:void(0)">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <a href="https://wa.me/5493718588129" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i> +54 9 3718588129
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/nexxostore.fsa" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i> @nexxostore.fsa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-solid fa-envelope"></i> contacto@nexxostore.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <span class="copy">&copy; 2026 NexxoStore. Todos los derechos reservados.</span>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexxoStore. Todos los derechos reservados. Vista previa de demostración.</p>
+            </div>
+
         </div>
     </footer>
 
+    <!-- Script Simple para Contador de Carrito Demo -->
+    <script>
+        let count = 0;
+        function addToCart() {
+            count++;
+            document.getElementById('cartCount').innerText = count;
+            const badge = document.getElementById('cartCount');
+            badge.style.transform = 'scale(1.4)';
+            setTimeout(() => badge.style.transform = 'scale(1)', 200);
+        }
+    </script>
 </body>
 </html>
