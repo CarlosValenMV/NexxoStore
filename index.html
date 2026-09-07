@@ -12,18 +12,25 @@
 </head>
 <body>
 
-    <!-- Navegación -->
+    <!-- Barra promocional superior -->
+    <div class="top-bar">
+        <span><i class="fa-solid fa-triangle-exclamation"></i> LIQUIDACIÓN 50% OFF SOLO HOY <i class="fa-solid fa-triangle-exclamation"></i></span>
+    </div>
+
+    <!-- Navegación superior -->
     <header class="navbar">
         <div class="logo">
             <span class="logo-text">Nexx<span class="logo-o-3d">O</span></span><span class="logo-store">Store</span>
         </div>
 
         <div class="search-bar">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" placeholder="¿Qué estás buscando?..." aria-label="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
         </div>
 
-        <div class="nav-actions">
+        <div class="nav-user-actions">
+            <a href="#" class="nav-user-link"><i class="fa-regular fa-circle-question"></i> <span>Ayuda</span></a>
+            <a href="#" class="nav-user-link"><i class="fa-regular fa-user"></i> <span>Mi cuenta</span></a>
             <button class="cart-btn" id="cartToggle" aria-label="Ver mi carrito">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="cart-text">Mi Carrito</span>
@@ -32,29 +39,32 @@
         </div>
     </header>
 
-    <!-- Banner Hero Principal de Pantalla Completa con Imagen de Fondo -->
-    <section class="hero-banner-full">
-        <div class="hero-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> Innovación Digital 2026</span>
-                
-                <!-- Título Masivo en 3D Integrado con el Banner -->
-                <h1 class="hero-title-3d">
-                    Nexx<span class="inline-3d-letter">O</span><span class="hero-title-store">Store</span>
-                </h1>
+    <!-- Menú de categorías -->
+    <nav class="cat-menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#catalogo">Productos <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Políticas de Devolución</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Quiénes Somos</a></li>
+        </ul>
+    </nav>
 
-                <p class="hero-description">Ecosistemas de sonido, carga ultrarrápida y accesorios diseñados para potenciar tu estilo de vida tech diario.</p>
-                
-                <div class="hero-actions">
-                    <a href="#catalogo" class="cta-btn">Explorar Catálogo <i class="fa-solid fa-arrow-right"></i></a>
-                    <div class="floating-tech-chips">
-                        <span class="chip"><i class="fa-solid fa-headphones"></i> High-Res Audio</span>
-                        <span class="chip"><i class="fa-solid fa-bolt"></i> Fast Charge 20W+</span>
-                    </div>
+    <!-- BANNER DE PANTALLA COMPLETA (Fondo completo con la gráfica/texto integrados) -->
+    <section class="full-image-banner">
+        <a href="#catalogo">
+            <!-- Reemplazá este enlace por tu imagen donde ya diseñaste el logo y los textos sobre la foto -->
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1920&q=80" alt="Nexo Store - Tu tienda online de confianza">
+            <div class="banner-text-overlay">
+                <h1>Nexo Store</h1>
+                <p class="sub-text">Tu tienda online de confianza</p>
+                <div class="banner-features">
+                    <span><i class="fa-solid fa-truck-fast"></i> Envío gratis</span>
+                    <span><i class="fa-regular fa-credit-card"></i> Cuotas sin interés</span>
                 </div>
             </div>
-        </div>
+        </a>
     </section>
 
     <!-- Catálogo de Productos -->
@@ -194,9 +204,7 @@
         <div class="wave-bg wave-2"></div>
 
         <div class="footer-container">
-            
             <div class="footer-grid">
-                <!-- Columna 1: Brand & Quiénes Somos -->
                 <div class="footer-col brand-col">
                     <div class="footer-logo">Nexx<span>O</span>Store</div>
                     <p class="about-text">
@@ -204,29 +212,26 @@
                     </p>
                 </div>
 
-                <!-- Columna 2: Navegación Demo -->
                 <div class="footer-col">
                     <h4>Navegación</h4>
                     <ul class="footer-links">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#catalogo">Catálogo de Productos</a></li>
-                        <li><a href="javascript:void(0)">¿Quiénes Somos?</a></li>
-                        <li><a href="javascript:void(0)">Mi Carrito</a></li>
+                        <li><a href="#">Quiénes Somos</a></li>
+                        <li><a href="#">Mi Carrito</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 3: Legales Demo -->
                 <div class="footer-col">
                     <h4>Soporte & Legales</h4>
                     <ul class="footer-links">
-                        <li><a href="javascript:void(0)">Políticas de Devolución</a></li>
-                        <li><a href="javascript:void(0)">Términos y Condiciones</a></li>
-                        <li><a href="javascript:void(0)">Garantía de Productos</a></li>
-                        <li><a href="javascript:void(0)">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Políticas de Devolución</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Garantía de Productos</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 4: Contacto -->
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul class="footer-contact-list">
@@ -241,7 +246,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <a href="#">
                                 <i class="fa-solid fa-envelope"></i> contacto@nexxostore.com
                             </a>
                         </li>
@@ -250,13 +255,11 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 NexxoStore. Todos los derechos reservados. Vista previa de demostración.</p>
+                <p>&copy; 2026 NexxoStore. Todos los derechos reservados.</p>
             </div>
-
         </div>
     </footer>
 
-    <!-- Script Simple para Contador de Carrito Demo -->
     <script>
         let count = 0;
         function addToCart() {
