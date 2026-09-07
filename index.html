@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexxoStore | Tecnología & Accesorios Modernos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuentes Google: Outfit para títulos y Plus Jakarta Sans para cuerpo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
     <!-- Navegación -->
     <header class="navbar">
         <div class="logo">
-            <span class="logo-text">Nexx<span class="logo-o-3d" data-text="O">O</span></span><span class="logo-store">Store</span>
+            <span class="logo-text">Nexx<span class="logo-o-3d">O</span></span><span class="logo-store">Store</span>
         </div>
 
         <div class="search-bar">
@@ -33,26 +32,25 @@
         </div>
     </header>
 
-    <!-- Banner Principal Hero / 3D Composition -->
-    <section class="hero-banner">
+    <!-- Banner Hero Principal de Pantalla Completa con Imagen de Fondo -->
+    <section class="hero-banner-full">
+        <div class="hero-overlay"></div>
         <div class="hero-container">
-            <div class="hero-text-side">
+            <div class="hero-content">
                 <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> Innovación Digital 2026</span>
-                <h1 class="hero-title">
-                    Nexx<span class="inline-3d-letter" data-letter="O">O</span>Store
+                
+                <!-- Título Masivo en 3D Integrado con el Banner -->
+                <h1 class="hero-title-3d">
+                    Nexx<span class="inline-3d-letter">O</span><span class="hero-title-store">Store</span>
                 </h1>
-                <p class="hero-description">Ecosistemas de sonido, carga ultrarrápida y accesorios diseñados para potenciar tu estilo de vida tech diario.</p>
-                <a href="#catalogo" class="cta-btn">Explorar Catálogo <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
 
-            <div class="hero-visual-side">
-                <div class="hero-banner-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80" alt="Banner Tecnología NexxoStore" class="banner-main-img">
-                    <div class="floating-tech-chip chip-1">
-                        <i class="fa-solid fa-headphones"></i> High-Res Audio
-                    </div>
-                    <div class="floating-tech-chip chip-2">
-                        <i class="fa-solid fa-bolt"></i> Fast Charge 20W+
+                <p class="hero-description">Ecosistemas de sonido, carga ultrarrápida y accesorios diseñados para potenciar tu estilo de vida tech diario.</p>
+                
+                <div class="hero-actions">
+                    <a href="#catalogo" class="cta-btn">Explorar Catálogo <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="floating-tech-chips">
+                        <span class="chip"><i class="fa-solid fa-headphones"></i> High-Res Audio</span>
+                        <span class="chip"><i class="fa-solid fa-bolt"></i> Fast Charge 20W+</span>
                     </div>
                 </div>
             </div>
@@ -210,7 +208,7 @@
                 <div class="footer-col">
                     <h4>Navegación</h4>
                     <ul class="footer-links">
-                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#">Inicio</a></li>
                         <li><a href="#catalogo">Catálogo de Productos</a></li>
                         <li><a href="javascript:void(0)">¿Quiénes Somos?</a></li>
                         <li><a href="javascript:void(0)">Mi Carrito</a></li>
@@ -263,8 +261,8 @@
         let count = 0;
         function addToCart() {
             count++;
-            document.getElementById('cartCount').innerText = count;
             const badge = document.getElementById('cartCount');
+            badge.innerText = count;
             badge.style.transform = 'scale(1.4)';
             setTimeout(() => badge.style.transform = 'scale(1)', 200);
         }
